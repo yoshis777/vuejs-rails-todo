@@ -64,3 +64,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
+gem 'jquery-rails'
+gem 'materialize-sass'
+gem 'material_icons'
