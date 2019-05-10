@@ -1,30 +1,21 @@
-# 概要
+## 概要
 
-[【動画付き】Rails 5.1で作るVue.jsアプリケーション ～Herokuデプロイからシステムテストまで～](https://qiita.com/jnchito/items/30ab14ebf29b945559f6)
-を参考にrailsでVue.jsを扱う。  
+[Vue.jsとRailsでTODOアプリのチュートリアルみたいなものを作ってみた](https://qiita.com/naoki85/items/51a8b0f2cbf949d08b11)を参考にTODOアプリを実装した。
 
-* rails導入
-* Vue.js導入
-* Vue.jsチュートリアルの適用
-* heroku本番環境へのデプロイ
-* vueファイル即時リロード適用
-* システムテスト導入
+* RailsでVue.js用のRestAPI作成
+* Vue-RouterによるURLルーティング
+* Vue.jsによるデータバインディング
+* Vue.jsによるajax経由のDBデータのCRUD操作
 
-（伊藤淳一さんの動画は、rubymineあるいはIntelliJ IDEA ultimateを使用している場合、ショートカット等の使用感を覗くことができます）
+## 使用技術
+※意図して学習で用いたもの
+#### CSS
+* Materialize
 
-# 実行
-#### 準備
-```bash
-$ bin/bundle install
-```
+#### Javascript
+* Vue.js
+* axios
 
-#### vueファイル変更即時リロードでサーバ起動
-```bash
-$ bin/server
-```
-
-#### システムテスト実行
-```bash
-bin/rails test:system
-```
-* テスト失敗時にtmp/screenshotsにpng画像が残る
+#### Ruby Gems
+* jbuilder：Jsonデータの操作
+* foreman：サーバ起動プロセス管理（Vue.jsの自動コンパイル）

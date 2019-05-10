@@ -15,7 +15,7 @@
                 </ul>
                 <ul class="right hide-on-large-only">
                     <li>
-                        <a class="dropdown-button" href="#!" data-activates="dropdown">
+                        <a class="dropdown-trigger" href="#!" data-target="dropdown">
                             Menu<i class="material-icons right">arrow_drop_down</i>
                         </a>
                     </li>
@@ -24,3 +24,8 @@
         </nav>
     </div>
 </template>
+<script>
+    $( document ).ready(function(){
+        $(".dropdown-trigger").dropdown();
+    })
+</script>
