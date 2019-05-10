@@ -24,13 +24,13 @@
         </div>
 
         <!-- 完了済みタスクのリスト表示 -->
-        <div class="btn">Display finished tasks</div>
-        <div>
+        <div class="btn" v-on:click="displayFinishedTasks">Display finished tasks</div>
+        <div id="finished-tasks" class="display_none">
             <ul class="collection">
                 <li v-for="task in tasks" v-if="task.is_done" v-bind:id="'row_task_' + task.id" class="collection-item">
                     <label>
                         <input type="checkbox" v-bind:id="'task_' + task.id" checked="checked">
-                        <span>{{ task.name }}</span>
+                        <span class="line-through">{{ task.name }}</span>
                     </label>
                 </li>
             </ul>
@@ -63,7 +63,22 @@
                         console.log(error)
                     }
                 )
+            },
+            displayFinishedTasks: function() {
+                document.querySelector('#finished-tasks').classList.toggle('display_none')
             }
         }
     }
 </script>
+
+<style scoped>
+    [v-cloak] {
+        display: none;
+    }
+    .display_none {
+        display: none;
+    }
+    .line-through {
+        text-decoration: line-through;
+    }
+</style>
