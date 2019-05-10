@@ -61,4 +61,6 @@ Rails.application.configure do
 
   # jsonによるPOSTテストのため、CSRF対策を無効にする
   config.action_controller.allow_forgery_protection = false
+  # npmを使用し、yarnは使用しないためyarnによるバージョン管理を無効にする
+  config.webpacker.check_yarn_integrity = false
 end
